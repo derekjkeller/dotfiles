@@ -1,0 +1,57 @@
+[user]
+    name = Derek Keller
+    email = derekjkeller@me.com
+[mergetool]
+    keepBackup = false
+    prompt = false
+[push]
+    default = matching
+[alias]
+    hist = log --color --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset) %C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate
+    unstage = reset HEAD --
+    restore = checkout --
+    discard = !git reset --hard && git clean -fd && git checkout HEAD
+    cn = commit --no-verify
+    co = checkout
+    praise = blame
+    graph = log --color --graph --pretty=format:\"%h | %ad | %an | %s%d\" --date=short
+    fr = !git fetch upstream && git rebase upstream/develop
+    lod = log --oneline origin/develop..
+[credential]
+    helper = osxkeychain
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    required = true
+    process = git-lfs filter-process
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore_global
+[branch]
+    autosetuprebase = always
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustexitcode = true
+[merge]
+    tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+    tool = Kaleidoscope

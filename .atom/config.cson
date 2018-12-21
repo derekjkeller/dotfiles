@@ -1,0 +1,16 @@
+"*":
+  core:
+    disabledPackages: [
+      "exception-reporting"
+    ]
+    projectHome: "~/Projects/Development"
+    telemetryConsent: "no"
+  editor:
+    fontSize: 12
+    tabLength: 3
+    tabType: "soft"
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  welcome:
+    showOnStartup: false

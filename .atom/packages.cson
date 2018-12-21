@@ -1,0 +1,5 @@
+packages: [
+  "file-icons"
+  "minimap"
+  "package-sync"
+]
