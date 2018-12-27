@@ -1,6 +1,6 @@
 [user]
     name = Derek Keller
-    email = derekjkeller@me.com
+	email = keller@bcm.edu
 [mergetool]
     keepBackup = false
     prompt = false
