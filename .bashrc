@@ -28,7 +28,7 @@ export MANPAGER='less -X';
 
 set -o noclobber
 
-shopt -s cdspell;
+shopt -s cdspell
 shopt -s checkwinsize
 shopt -s dotglob
 shopt -s extglob
