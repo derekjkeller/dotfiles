@@ -17,6 +17,7 @@ brew "tmux"
 
 cask "airmedia"
 cask "atom"
+cask "backblaze"
 cask "bartender"
 cask "box-drive"
 cask "default-folder-x"
