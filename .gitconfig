@@ -29,6 +29,8 @@
     excludesfile = ~/.gitignore_global
 [branch]
     autosetuprebase = always
+[fetch]
+    prune = true
 [color]
     branch = auto
     diff = auto
