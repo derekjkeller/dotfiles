@@ -2,11 +2,14 @@
   core:
     disabledPackages: [
       "exception-reporting"
+      "spell-check"
     ]
     projectHome: "~/Projects/Development"
     telemetryConsent: "no"
   editor:
     fontSize: 12
+    showIndentGuide: true
+    showInvisibles: true
     tabLength: 3
     tabType: "soft"
   "package-sync":

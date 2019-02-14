@@ -1,4 +1,5 @@
 packages: [
+  "atom-beautify"
   "file-icons"
   "minimap"
   "package-sync"
