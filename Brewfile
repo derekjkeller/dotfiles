@@ -13,6 +13,7 @@ brew "httrack"
 brew "hub"
 brew "jq"
 brew "mas"
+brew "sqlparse"
 brew "tmux"
 
 cask "airmedia"
