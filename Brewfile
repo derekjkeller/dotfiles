@@ -24,7 +24,6 @@ cask "box-drive"
 cask "default-folder-x"
 cask "dropbox"
 cask "fantastical"
-cask "focus"
 cask "google-chrome"
 cask "grammarly"
 cask "hazel"
@@ -55,7 +54,6 @@ mas "Capo", id: 696977615
 mas "Color Picker", id: 641027709
 mas "Compressor", id: 424390742
 mas "DaisyDisk", id: 411643860
-mas "Day One", id: 1055511498
 mas "Deliveries", id: 924726344
 mas "Desktop Curtain", id: 414088151
 mas "Final Cut Pro", id: 424389933
