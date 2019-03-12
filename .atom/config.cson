@@ -10,7 +10,7 @@
     fontSize: 12
     showIndentGuide: true
     showInvisibles: true
-    tabLength: 3
+    tabLength: 4
     tabType: "soft"
   "package-sync":
     createOnChange: true
