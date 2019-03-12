@@ -16,7 +16,6 @@ brew "mas"
 brew "sqlparse"
 brew "tmux"
 
-cask "airmedia"
 cask "atom"
 cask "backblaze"
 cask "bartender"
@@ -43,7 +42,6 @@ cask "timing"
 cask "tower"
 cask "vagrant"
 cask "virtualbox"
-cask "zoomus"
 
 mas "1Password 7", id: 1333542190
 mas "AdGuard for Safari", id: 1440147259
