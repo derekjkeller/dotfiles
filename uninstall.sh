@@ -22,3 +22,11 @@ for file in ${files[@]}; do
       mv $HOME/$file{.orig,}
    fi
 done
+
+if [ -h $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]; then
+   rm $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+fi
+
+if [ -f $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User.orig ]; then
+   mv $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User{.orig,}
+fi

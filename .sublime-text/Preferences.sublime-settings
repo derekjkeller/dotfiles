@@ -1,0 +1,40 @@
+{
+	"animation_enabled": false,
+	"caret_extra_bottom": 1,
+	"caret_extra_top": 2,
+	"caret_extra_width": 1,
+	"caret_style": "blink",
+	"color_scheme": "Packages/One Dark Material - Theme/schemes/OneDark.tmTheme",
+	"drag_text": false,
+	"draw_white_space": "none",
+	"ensure_newline_at_eof_on_save": true,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"A File Icon",
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"margin": 0,
+	"match_selection": false,
+	"one_dark_show_scroll_tabs": true,
+	"one_dark_show_tabs_dropdown": true,
+	"rulers":
+	[
+		80
+	],
+	"scroll_past_end": false,
+	"show_definitions": false,
+	"show_tab_close_buttons": true,
+	"tab_size": 4,
+	"theme": "One Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"tree_animation_enabled": false,
+	"trim_trailing_white_space_on_save": true
+}
