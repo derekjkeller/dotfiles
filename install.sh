@@ -27,6 +27,14 @@ if [[ -x "$(command -v atom)" ]]; then
    ln -sfn $SCRIPT_PATH/.atom $HOME
 fi
 
+if [[ -x "$(command -v subl)" ]]; then
+   if [ -d $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ] && ! [ -h $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]; then
+      mv $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User{,.orig}
+   fi
+
+   ln -sfn $SCRIPT_PATH/.sublime-text $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+fi
+
 if [[ -x "$(command -v brew)" ]]; then
    if [ -f $HOME/Brewfile ] && ! [ -h $HOME/Brewfile ]; then
       mv $HOME/Brewfile{,.orig}
