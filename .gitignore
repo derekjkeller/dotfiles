@@ -1,3 +1,10 @@
+# Atom sync
+/.atom/blob-store/
+/.atom/compile-cache/
+/.atom/packages/
+/.atom/storage/
+
+# Sublime Text 3 sync
 .sublime-text/*
 !.sublime-text/Preferences.sublime-settings
 !.sublime-text/Package Control.sublime-settings
