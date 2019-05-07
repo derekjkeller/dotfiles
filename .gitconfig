@@ -15,8 +15,11 @@
     co = checkout
     praise = blame
     graph = log --color --graph --pretty=format:\"%h | %ad | %an | %s%d\" --date=short
-    fr = !git fetch upstream && git rebase upstream/develop
-    lod = log --oneline origin/develop..
+    fro = !git fetch && git rebase origin/master
+    fru = !git fetch upstream && git rebase upstream/master
+    commita = !git add --all && git commit
+    aliases = config --get-regexp alias
+    stats = status -s --ignored
 [credential]
     helper = osxkeychain
 [filter "lfs"]
