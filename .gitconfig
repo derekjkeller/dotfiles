@@ -1,6 +1,6 @@
 [user]
     name = Derek Keller
-    email = derekjkeller@me.com
+    email = derekjkeller@me.com 
 [mergetool]
     keepBackup = false
     prompt = false
@@ -60,3 +60,5 @@
     cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
     tool = Kaleidoscope
+[http]
+	postBuffer = 524288000
