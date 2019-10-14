@@ -3,18 +3,6 @@ case $- in
       *) return;;
 esac
 
-# Color definitions
-
-black="\e[1;30m"
-blue="\e[1;34m"
-cyan="\e[1;36m"
-green="\e[1;32m"
-orange="\e[1;33m"
-purple="\e[1;35m"
-red="\e[1;31m"
-white="\e[1;37m"
-yellow="\e[1;33m"
-
 # Shell exports
 
 export EDITOR='vim';
@@ -48,9 +36,9 @@ alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias grep="grep --color=auto"
 alias ll="ls -Glah"
-alias nowtime="date +"%H:%M:%S""
-alias nowdate="date +"%Y-%m-%d""
-alias path="echo -e ${PATH//:/\\\n} | sort"
+alias nowtime='date +"%H:%M:%S"'
+alias nowdate='date +"%Y-%m-%d"'
+alias path="echo -e \${PATH//:/\\\n} | sort"
 alias ping="ping -c 5"
 alias ports="netstat -tulanp"
 
@@ -65,35 +53,43 @@ mkcd () {
 
 # Shell completion
 
-brew_bin=$(which brew 2>/dev/null)
+brew_bin=$(command -v brew 2>/dev/null)
 
 if [[ -n $brew_bin && -f $(${brew_bin} --prefix)/etc/bash_completion ]]; then
-  source $(${brew_bin} --prefix)/etc/bash_completion
+  source "$(${brew_bin} --prefix)/etc/bash_completion"
 fi
 
 # Extended bash prompt
 
-if [[ $EUID -ne 0 ]]; then
-   PS1="\[$green\]\u"
-else
-   PS1="\[$red\]\u"
+black="\e[1;30m"
+blue="\e[1;34m"
+cyan="\e[1;36m"
+green="\e[1;32m"
+orange="\e[1;33m"
+purple="\e[1;35m"
+red="\e[1;31m"
+white="\e[1;37m"
+yellow="\e[1;33m"
+reset='\e[0m'
+
+if [[ "$(type -t __git_ps1)" = "function" ]]; then
+    export GIT_PS1_SHOWDIRTYSTATE=true
+    export GIT_PS1_SHOWCOLORHINTS=true
+    export GIT_PS1_UNTRACKEDFILES=true
+
+    git_check=true
 fi
 
-if [[ -n "$SSH_TTY" ]]; then
-   PS1+="@\h"
-fi
+set_prompt() {
+  prompt="\[$green\]local:\[$blue\]\w"
 
-PS1+="\[$white\]:\[$blue\]\w"
+  [[ $git_check ]] && prompt+="\[$red\]\$(__git_ps1)"
+  prompt+="\[$reset\]$ "
 
-if [[ "$(type -t __git_ps1)" = 'function' ]]; then
-   export GIT_PS1_SHOWDIRTYSTATE=true
-   export GIT_PS1_SHOWCOLORHINTS=true
-   export GIT_PS1_UNTRACKEDFILES=true
+  PS1=$(printf "%s" "$prompt")
+}
 
-   PS1+="\[$red\]\$(__git_ps1)"
-fi
-
-export PS1+="\[$white\]\$ "
+export PROMPT_COMMAND="set_prompt"
 
 # NVM and Nodejs
 

@@ -1,4 +1,3 @@
 #!/bin/bash
 
-brew update && brew upgrade && brew cask upgrade && brew cleanup
-mas upgrade
+brew update && brew upgrade && brew cleanup
